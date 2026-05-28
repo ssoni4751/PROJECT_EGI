@@ -121,8 +121,9 @@
         </a>
 
         <!-- Desktop Navigation links with sleek formatting -->
-        <nav class="hidden md:flex items-center space-x-10">
+        <nav class="hidden md:flex items-center space-x-8 lg:space-x-10">
           <a href="#services" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors py-1.5">Services</a>
+          <a href="#booking-desk" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors py-1.5">Book Desk</a>
           <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors py-1.5">Our Creed</a>
           <a href="#process" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors py-1.5">Filing Roadmap</a>
           <a href="#contact" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors py-1.5">Direct Desk</a>
@@ -147,6 +148,7 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu" class="hidden md:hidden mt-2 w-full bg-white/95 backdrop-blur-xl border border-slate-200/80 shadow-2xl rounded-2xl px-5 py-6 space-y-4 flex flex-col">
       <a href="#services" class="mobile-link text-base font-bold text-slate-600 hover:text-slate-950 px-2">Services</a>
+      <a href="#booking-desk" class="mobile-link text-base font-bold text-slate-600 hover:text-slate-950 px-2">Book Desk</a>
       <a href="#about" class="mobile-link text-base font-bold text-slate-600 hover:text-slate-950 px-2">Our Creed</a>
       <a href="#process" class="mobile-link text-base font-bold text-slate-600 hover:text-slate-950 px-2">Filing Roadmap</a>
       <a href="#contact" class="mobile-link text-base font-bold text-slate-600 hover:text-slate-950 px-2">Direct Desk</a>
@@ -194,15 +196,15 @@
 
         <!-- Premium CTAs -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto pt-2">
-          <a href="https://wa.me/917217646673" target="_blank" rel="noopener noreferrer" 
-             class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-10 py-5 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-glow-emerald text-base tracking-wide">
-            <i data-lucide="message-square" class="w-5 h-5"></i>
-            Initiate WhatsApp Consultation
+          <a href="#booking-desk" 
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-extrabold px-10 py-5 rounded-2xl transition-all duration-300 shadow-lg text-base tracking-wide">
+            <i data-lucide="calendar" class="w-5 h-5"></i>
+            Schedule Appointment / Callback
           </a>
-          <a href="#services" 
-             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-850 font-bold px-10 py-5 rounded-2xl transition-all border border-slate-200 shadow-sm text-base">
-            Explore Services
-            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          <a href="https://wa.me/917217646673" target="_blank" rel="noopener noreferrer" 
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-10 py-5 rounded-2xl transition-all border border-transparent shadow-sm text-base">
+            <i data-lucide="message-square" class="w-5 h-5"></i>
+            WhatsApp Chat
           </a>
         </div>
 
@@ -256,6 +258,85 @@
             </div>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Callback / Appointment Booking Section -->
+  <section id="booking-desk" class="py-16 md:py-24 bg-white border-y border-slate-200/50 scroll-mt-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-premium relative overflow-hidden">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+          <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-full inline-block">Dispatch Desk</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-950 font-outfit">Consultation Dispatch</h2>
+          <p class="text-sm text-slate-500 leading-relaxed">Select your request type. The form will generate a pre-formatted message sent directly to our secure WhatsApp line.</p>
+        </div>
+
+        <!-- Appointment Form -->
+        <form id="whatsapp-booking-form" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Full Name -->
+            <div class="space-y-2">
+              <label for="client_name" class="block text-xs font-bold uppercase tracking-wider text-slate-600">Your Full Name</label>
+              <input type="text" id="client_name" required placeholder="Enter name" 
+                     class="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-950 transition-all text-sm font-semibold">
+            </div>
+
+            <!-- Mobile No -->
+            <div class="space-y-2">
+              <label for="client_phone" class="block text-xs font-bold uppercase tracking-wider text-slate-600">Mobile Number</label>
+              <input type="tel" id="client_phone" required placeholder="Enter mobile number" 
+                     class="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-950 transition-all text-sm font-semibold">
+            </div>
+
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Service Option -->
+            <div class="space-y-2">
+              <label for="client_service" class="block text-xs font-bold uppercase tracking-wider text-slate-600">Service Required</label>
+              <select id="client_service" required 
+                      class="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-950 transition-all text-sm font-semibold">
+                <option value="" disabled selected>Select service</option>
+                <option value="PF Consultancy">PF Consultancy (Disputes, claims, mismatch)</option>
+                <option value="ITR Filing">Income Tax Return (ITR)</option>
+                <option value="GST Services">GST (Registration / Filing)</option>
+              </select>
+            </div>
+
+            <!-- Request Type -->
+            <div class="space-y-2">
+              <label for="request_type" class="block text-xs font-bold uppercase tracking-wider text-slate-600">Request Type</label>
+              <select id="request_type" required 
+                      class="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-950 transition-all text-sm font-semibold">
+                <option value="Callback" selected>Request Callback</option>
+                <option value="Appointment">Schedule Appointment</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Appointment Date/Time Field (Hidden by default, shown when request_type is 'Appointment') -->
+          <div id="date_time_container" class="hidden space-y-2 transition-all duration-300">
+            <label for="client_datetime" class="block text-xs font-bold uppercase tracking-wider text-slate-600">Proposed Appointment Date & Time</label>
+            <input type="datetime-local" id="client_datetime" 
+                   class="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-950 transition-all text-sm font-semibold">
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-4">
+            <button type="submit" 
+                    class="w-full inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-4 rounded-xl transition-all shadow-md hover:shadow-glow-emerald text-base">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              Dispatch to WhatsApp Line
+            </button>
+          </div>
+        </form>
 
       </div>
     </div>
@@ -723,13 +804,19 @@
           </a>
         </div>
 
-        <!-- Social Icons / Link Right -->
+        <!-- Social Icons / Link Right (Facebook added) -->
         <div class="md:col-span-3 flex md:justify-end gap-3.5">
+          <!-- Facebook Page Link -->
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
+             class="w-11 h-11 bg-slate-900 hover:bg-slate-800 text-white flex items-center justify-center rounded-xl transition-colors border border-slate-800/80 shadow-md"
+             aria-label="Facebook Page">
+            <i data-lucide="facebook" class="w-5.5 h-5.5 text-blue-500"></i>
+          </a>
           <!-- WhatsApp Link -->
           <a href="https://wa.me/917217646673" target="_blank" rel="noopener noreferrer" 
              class="w-11 h-11 bg-slate-900 hover:bg-slate-800 text-white flex items-center justify-center rounded-xl transition-colors border border-slate-800/80 shadow-md"
              aria-label="WhatsApp">
-            <i data-lucide="message-circle" class="w-5.5 h-5.5"></i>
+            <i data-lucide="message-circle" class="w-5.5 h-5.5 text-emerald-500"></i>
           </a>
           <!-- Twitter / X Link Placeholder -->
           <a href="https://x.com" target="_blank" rel="noopener noreferrer" 
@@ -783,6 +870,54 @@
         menuIcon.setAttribute('data-lucide', 'menu');
         lucide.createIcons();
       });
+    });
+
+    // Form Toggle Logic for Appointment Date & Time
+    const requestTypeSelect = document.getElementById('request_type');
+    const dateTimeContainer = document.getElementById('date_time_container');
+    const clientDatetime = document.getElementById('client_datetime');
+
+    requestTypeSelect.addEventListener('change', (e) => {
+      if (e.target.value === 'Appointment') {
+        dateTimeContainer.classList.remove('hidden');
+        clientDatetime.setAttribute('required', 'true');
+      } else {
+        dateTimeContainer.classList.add('hidden');
+        clientDatetime.removeAttribute('required');
+      }
+    });
+
+    // Handle Form submission and redirection directly to WhatsApp API
+    const bookingForm = document.getElementById('whatsapp-booking-form');
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('client_name').value.trim();
+      const phone = document.getElementById('client_phone').value.trim();
+      const service = document.getElementById('client_service').value;
+      const requestType = document.getElementById('request_type').value;
+      const rawDateTime = document.getElementById('client_datetime').value;
+
+      // Construct highly professional message format
+      let messageText = `Hello Anshu Computer & Tax Consultancy,\n\nI would like to request a *${requestType}*.\n\n*Client Details:*\n`;
+      messageText += `• *Name:* ${name}\n`;
+      messageText += `• *Mobile No:* ${phone}\n`;
+      messageText += `• *Service Option:* ${service}\n`;
+
+      if (requestType === 'Appointment' && rawDateTime) {
+        // Format date and time beautifully
+        const dateObj = new Date(rawDateTime);
+        const formattedDate = dateObj.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+        const formattedTime = dateObj.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+        messageText += `• *Proposed Schedule:* ${formattedDate} at ${formattedTime}\n`;
+      }
+
+      // Safe URL Encode
+      const encodedMsg = encodeURIComponent(messageText);
+      const whatsappURL = `https://wa.me/917217646673?text=${encodedMsg}`;
+
+      // Dispatch to WhatsApp
+      window.open(whatsappURL, '_blank');
     });
   </script>
 </body>

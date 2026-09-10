@@ -110,7 +110,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-slate-900 mb-1">{t("contact-email-label")}</h4>
-                <p className="text-slate-600 font-medium">anshucomputer@gmail.com</p>
+                <p className="text-slate-600 font-medium">Anshucomputerorai@gmail.com</p>
                 <p className="text-slate-400 text-sm mt-1">{t("contact-whatsapp-sub")}</p>
               </div>
             </div>

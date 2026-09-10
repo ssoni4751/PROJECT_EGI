@@ -35,7 +35,7 @@ export default function Home() {
               rotate: [0, 5, 0],
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-40 -left-20 w-[600px] h-[600px] bg-emerald-400/20 rounded-full blur-[100px]"
+            className="absolute -top-40 -left-20 w-[600px] h-[600px] bg-emerald-500/30 rounded-full blur-[90px]"
           />
           <motion.div 
             animate={{ 
@@ -43,14 +43,14 @@ export default function Home() {
               rotate: [0, -5, 0],
             }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-20 -right-20 w-[500px] h-[500px] bg-blue-400/20 rounded-full blur-[100px]"
+            className="absolute top-20 -right-20 w-[500px] h-[500px] bg-blue-500/30 rounded-full blur-[90px]"
           />
           <motion.div 
             animate={{ 
               scale: [1, 1.1, 1],
             }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-0 left-1/4 w-[800px] h-[300px] bg-teal-300/20 rounded-full blur-[100px]"
+            className="absolute bottom-0 left-1/4 w-[800px] h-[300px] bg-teal-400/30 rounded-full blur-[90px]"
           />
         </div>
 
@@ -75,14 +75,19 @@ export default function Home() {
             <motion.div variants={itemVariants} className="space-y-6 max-w-5xl relative">
               {/* Floating decorative elements */}
               <motion.div 
-                animate={{ y: [-10, 10, -10] }} 
+                animate={{ y: [-15, 15, -15], rotate: [0, 10, 0] }} 
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -left-12 -top-8 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 shadow-sm hidden md:block"
+                className="absolute -left-16 -top-12 w-16 h-16 rounded-full bg-gradient-to-tr from-emerald-400 to-teal-300 shadow-lg shadow-emerald-400/40 hidden md:flex items-center justify-center backdrop-blur-md opacity-80"
               />
               <motion.div 
-                animate={{ y: [10, -10, 10] }} 
+                animate={{ y: [15, -15, 15], rotate: [12, -12, 12] }} 
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -right-8 bottom-0 w-12 h-12 rounded-lg bg-teal-100 border border-teal-200 shadow-sm rotate-12 hidden md:block"
+                className="absolute -right-12 bottom-10 w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-400 to-emerald-400 shadow-xl shadow-blue-400/30 hidden md:block opacity-80 backdrop-blur-md"
+              />
+              <motion.div 
+                animate={{ y: [-10, 10, -10], rotate: [45, 90, 45] }} 
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute left-1/4 -bottom-16 w-12 h-12 rounded-lg bg-gradient-to-tr from-amber-300 to-orange-400 shadow-lg shadow-amber-400/30 hidden md:block opacity-70"
               />
 
               <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tight text-slate-900 font-[family-name:var(--font-geist-mono)] leading-[1.1]">

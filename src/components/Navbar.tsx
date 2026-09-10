@@ -26,12 +26,8 @@ export default function Navbar() {
         <div className="px-6 md:px-8 py-4 md:py-5 flex items-center justify-between">
           
           <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-            <div className="w-12 h-12 bg-gradient-to-tr from-emerald-600 to-teal-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-105 transition-transform duration-300">
-              <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L4 6.5V17.5L12 22L20 17.5V6.5L12 2Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                <path d="M12 6L7 15H17L12 6Z" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                <path d="M10 12L12 14L15.5 10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-slate-200/50 group-hover:scale-105 transition-transform duration-300 overflow-hidden border border-slate-100">
+              <img src="/logo.png" alt="Anshu Computer & Tax Consultancy Logo" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
               <span className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-none font-[family-name:var(--font-geist-mono)]">

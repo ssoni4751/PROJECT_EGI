@@ -14,19 +14,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
           
           <div className="md:col-span-5 lg:col-span-4 space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center shadow-md">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#34d399" />
-                      <stop offset="100%" stopColor="#059669" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M12 2L4 6.5V17.5L12 22L20 17.5V6.5L12 2Z" stroke="url(#footerGradient)" strokeWidth="1.8" strokeLinejoin="round" />
-                  <path d="M12 6L7 15H17L12 6Z" fill="url(#footerGradient)" fillOpacity="0.15" stroke="url(#footerGradient)" strokeWidth="1.8" strokeLinejoin="round" />
-                  <path d="M10 12L12 14L15.5 10" stroke="#10b981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+            <Link href="/" className="flex items-center gap-3 group focus:outline-none">
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-slate-200/50 overflow-hidden border border-slate-100">
+                <img src="/logo.png" alt="Anshu Computer Logo" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="text-base font-black text-slate-900 tracking-tight leading-none font-[family-name:var(--font-geist-mono)]">

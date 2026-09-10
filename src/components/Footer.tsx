@@ -26,7 +26,7 @@ export default function Footer() {
                   {t("brand-sub")}
                 </span>
               </div>
-            </div>
+            </Link>
             <p className="text-sm font-medium text-slate-500 leading-relaxed max-w-sm">
               {t("footer-desc")}
             </p>

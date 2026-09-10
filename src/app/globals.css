@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-outfit: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --shadow-premium: 0 20px 50px -12px rgba(15, 23, 42, 0.06);
+  --shadow-glow-emerald: 0 0 40px -5px rgba(16, 185, 129, 0.2);
+  --shadow-glow-slate: 0 0 40px -5px rgba(15, 23, 42, 0.08);
+}
+
+@layer utilities {
+  .bg-mesh-premium {
+    background-color: #fafbfc;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(224, 242, 254, 0.6) 0px, transparent 50%),
+      radial-gradient(at 50% 0%, rgba(209, 250, 229, 0.5) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(243, 232, 255, 0.5) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(224, 242, 254, 0.3) 0px, transparent 50%);
+  }
+
+  .bg-dots {
+    background-size: 24px 24px;
+    background-image: radial-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  }
+
+  .premium-border-glow {
+    position: relative;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+    padding: 1px;
+  }
+  
+  .premium-border-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1.5px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.15) 0%, rgba(15, 23, 42, 0.02) 50%, rgba(16, 185, 129, 0.15) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fafbfc;
+}

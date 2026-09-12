@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Twitter, Facebook, Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -58,7 +58,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Social Media Links */}
+        <div className="mt-12 md:mt-16 flex justify-center gap-6">
+          <a href="https://twitter.com/ssoni0007" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#1DA1F2] hover:text-white hover:scale-110 shadow-sm hover:shadow-md transition-all duration-300">
+             <Twitter className="w-4 h-4" fill="currentColor" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61585849024721" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#1877F2] hover:text-white hover:scale-110 shadow-sm hover:shadow-md transition-all duration-300">
+             <Facebook className="w-4 h-4" fill="currentColor" />
+          </a>
+          <a href="https://instagram.com/ssoni47512023" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white hover:scale-110 shadow-sm hover:shadow-md transition-all duration-300">
+             <Instagram className="w-4 h-4" />
+          </a>
+          <a href="mailto:anshucomputerorai@gmail.com" aria-label="Email" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-emerald-600 hover:text-white hover:scale-110 shadow-sm hover:shadow-md transition-all duration-300">
+             <Mail className="w-4 h-4" />
+          </a>
+        </div>
+
+        <div className="mt-10 pt-8 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs font-semibold text-slate-500 text-center sm:text-left">
             {t("footer-copyright")}
           </p>

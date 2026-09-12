@@ -109,7 +109,7 @@ export default function ChatWidget() {
             <div className="bg-gradient-to-r from-emerald-600 to-teal-500 p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-emerald-100">
-                   <img src="/logo.png" alt="Pragya" className="w-full h-full object-cover" />
+                   <img src="/pragya-avatar.jpg" alt="Pragya" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="font-bold text-white text-sm">Pragya (प्रज्ञा)</h3>
@@ -184,16 +184,16 @@ export default function ChatWidget() {
       {/* Floating Button */}
       <button
         onClick={toggleChat}
-        className="w-14 h-14 bg-emerald-600 rounded-full shadow-xl shadow-emerald-600/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-500/20 z-50 group"
+        className={`w-14 h-14 rounded-full shadow-xl shadow-emerald-600/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-500/20 z-50 overflow-hidden ${
+          isOpen ? 'bg-emerald-600' : 'bg-white border-2 border-emerald-500'
+        }`}
       >
         {isOpen ? (
           <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
+          <img src="/pragya-avatar.jpg" alt="Chat with Pragya" className="w-full h-full object-cover scale-[1.15]" />
         )}
       </button>
     </div>

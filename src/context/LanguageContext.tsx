@@ -138,6 +138,11 @@ const simpleTranslations: Record<Language, Record<string, string>> = {
     "footer-copyright": "© 2026 Anshu Computer and Tax Consultancy. All rights reserved.",
     "footer-national-badge": "Trusted National Consultant",
     "footer-loc-badge": "Kaushal Market, Orai, UP",
+    "nav-legal": "Legal & Compliance",
+    "nav-privacy": "Privacy Policy",
+    "nav-terms": "Terms & Conditions",
+    "nav-refund": "Refund Policy",
+    "nav-disclaimer": "Disclaimer",
     "toggle-lang-label": "हिन्दी"
   },
   hi: {
@@ -267,6 +272,11 @@ const simpleTranslations: Record<Language, Record<string, string>> = {
     "footer-copyright": "© 2026 अंशु कंप्यूटर और टैक्स कंसल्टेंसी। सर्वाधिकार सुरक्षित।",
     "footer-national-badge": "विश्वसनीय टैक्स और पीएफ सलाहकार",
     "footer-loc-badge": "कौशल मार्केट, उरई, उत्तर प्रदेश",
+    "nav-legal": "कानूनी जानकारी (Legal)",
+    "nav-privacy": "प्राइवेसी पॉलिसी (Privacy)",
+    "nav-terms": "नियम और शर्तें (Terms)",
+    "nav-refund": "रिफंड पॉलिसी (Refund)",
+    "nav-disclaimer": "डिस्क्लेमर (Disclaimer)",
     "toggle-lang-label": "English"
   }
 };

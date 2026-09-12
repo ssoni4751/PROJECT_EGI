@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-7 lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="md:col-span-7 lg:col-span-8 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="space-y-5">
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">{t("footer-access-title")}</h4>
               <ul className="space-y-3">
@@ -49,8 +49,18 @@ export default function Footer() {
                 <li><Link href="/contact" className="text-sm font-semibold text-slate-500 hover:text-emerald-600 transition-colors inline-flex items-center gap-1 group">{t("nav-contact")} <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /></Link></li>
               </ul>
             </div>
+
+            <div className="space-y-5">
+              <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">{t("nav-legal")}</h4>
+              <ul className="space-y-3">
+                <li><Link href="/privacy" className="text-sm font-semibold text-slate-500 hover:text-emerald-600 transition-colors inline-flex items-center gap-1 group">{t("nav-privacy")} <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /></Link></li>
+                <li><Link href="/terms" className="text-sm font-semibold text-slate-500 hover:text-emerald-600 transition-colors inline-flex items-center gap-1 group">{t("nav-terms")} <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /></Link></li>
+                <li><Link href="/refund" className="text-sm font-semibold text-slate-500 hover:text-emerald-600 transition-colors inline-flex items-center gap-1 group">{t("nav-refund")} <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /></Link></li>
+                <li><Link href="/disclaimer" className="text-sm font-semibold text-slate-500 hover:text-emerald-600 transition-colors inline-flex items-center gap-1 group">{t("nav-disclaimer")} <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /></Link></li>
+              </ul>
+            </div>
             
-            <div className="col-span-2 sm:col-span-1 space-y-5">
+            <div className="col-span-2 sm:col-span-1 lg:col-span-1 space-y-5">
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">{t("footer-loc-badge")}</h4>
               <ul className="space-y-3">
                 <li>

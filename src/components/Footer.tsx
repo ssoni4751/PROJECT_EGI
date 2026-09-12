@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="relative mt-20 sm:mt-32 border-t border-slate-200/60 bg-white/50 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-8 max-w-4xl mx-auto">
           <div className="space-y-5">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">{t("footer-access-title")}</h4>
             <ul className="space-y-3">
@@ -39,7 +39,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className="col-span-2 sm:col-span-1 lg:col-span-1 space-y-5">
+          <div className="space-y-5">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">{t("footer-loc-badge")}</h4>
             <ul className="space-y-3">
               <li>

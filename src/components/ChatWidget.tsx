@@ -181,11 +181,13 @@ export default function ChatWidget() {
         )}
       </AnimatePresence>
 
-      {/* Floating Button */}
+      {/* Floating Button / Avatar */}
       <button
         onClick={toggleChat}
-        className={`w-14 h-14 rounded-full shadow-xl shadow-emerald-600/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-500/20 z-50 overflow-hidden ${
-          isOpen ? 'bg-emerald-600' : 'bg-white border-2 border-emerald-500'
+        className={`shadow-2xl flex items-center justify-center hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-500/30 z-50 overflow-hidden ${
+          isOpen 
+            ? 'w-14 h-14 rounded-full bg-emerald-600' 
+            : 'w-28 h-36 sm:w-32 sm:h-40 rounded-2xl bg-white border-2 border-emerald-100 shadow-emerald-900/20'
         }`}
       >
         {isOpen ? (
@@ -193,7 +195,21 @@ export default function ChatWidget() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <img src="/pragya-avatar.jpg" alt="Chat with Pragya" className="w-full h-full object-cover scale-[1.15]" />
+          <div className="relative w-full h-full group">
+            <img 
+              src="/pragya-avatar.jpg" 
+              alt="Pragya Assistant" 
+              className="w-full h-full object-cover object-top" 
+            />
+            {/* Overlay Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-emerald-900/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-2 pb-3">
+               <span className="text-white text-xs sm:text-sm font-semibold tracking-wide drop-shadow-md text-center">Hi, I'm Pragya!</span>
+               <span className="text-emerald-100 text-[10px] sm:text-xs text-center drop-shadow-md">Chat with me</span>
+            </div>
+            
+            {/* Online Indicator */}
+            <div className="absolute top-2 right-2 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full animate-pulse shadow-md"></div>
+          </div>
         )}
       </button>
     </div>

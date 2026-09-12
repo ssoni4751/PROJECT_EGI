@@ -4,6 +4,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ 
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
           <Navbar />
           <main className="pt-24">{children}</main>
           <Footer />
+          <ChatWidget />
         </LanguageProvider>
       </body>
     </html>

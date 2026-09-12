@@ -47,7 +47,7 @@ export default function ChatWidget() {
     try {
       // In production, this should point to your Babu Render URL
       // For now, we use the local URL if running locally, or the production URL
-      const API_URL = process.env.NEXT_PUBLIC_BABU_API_URL || "https://babu-bot.onrender.com"; 
+      const API_URL = process.env.NEXT_PUBLIC_BABU_API_URL || "https://babu-tf49.onrender.com"; 
       
       const response = await fetch(`${API_URL}/api/public_chat`, {
         method: "POST",

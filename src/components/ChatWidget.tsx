@@ -181,13 +181,13 @@ export default function ChatWidget() {
         )}
       </AnimatePresence>
 
-      {/* Floating Button / Avatar */}
+      {/* Floating 3D Avatar Button */}
       <button
         onClick={toggleChat}
-        className={`shadow-2xl flex items-center justify-center hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-500/30 z-50 overflow-hidden ${
+        className={`group flex items-center justify-center hover:scale-105 transition-all duration-300 focus:outline-none z-50 ${
           isOpen 
-            ? 'w-14 h-14 rounded-full bg-emerald-600' 
-            : 'w-28 h-36 sm:w-32 sm:h-40 rounded-2xl bg-white border-2 border-emerald-100 shadow-emerald-900/20'
+            ? 'w-14 h-14 rounded-full bg-emerald-600 shadow-xl' 
+            : 'w-40 h-52 sm:w-48 sm:h-60'
         }`}
       >
         {isOpen ? (
@@ -195,20 +195,21 @@ export default function ChatWidget() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <div className="relative w-full h-full group">
+          <div className="relative w-full h-full flex items-end justify-center">
+            {/* The transparent avatar (no background, no border) */}
             <img 
-              src="/pragya-avatar.jpg" 
+              src="/pragya-avatar.png" 
               alt="Pragya Assistant" 
-              className="w-full h-full object-cover object-top" 
+              className="w-full h-full object-contain object-bottom drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)] transition-transform duration-300 group-hover:-translate-y-2" 
             />
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-emerald-900/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-2 pb-3">
-               <span className="text-white text-xs sm:text-sm font-semibold tracking-wide drop-shadow-md text-center">Hi, I'm Pragya!</span>
-               <span className="text-emerald-100 text-[10px] sm:text-xs text-center drop-shadow-md">Chat with me</span>
-            </div>
             
-            {/* Online Indicator */}
-            <div className="absolute top-2 right-2 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full animate-pulse shadow-md"></div>
+            {/* Floating Greeting Bubble next to avatar */}
+            <div className="absolute top-12 -left-4 bg-white px-3 py-2 rounded-2xl rounded-br-none shadow-lg border border-emerald-100 opacity-90 group-hover:opacity-100 transition-opacity">
+               <span className="text-emerald-700 text-xs sm:text-sm font-bold whitespace-nowrap">Hi, I'm Pragya! 👋</span>
+            </div>
+
+            {/* Online Indicator near the shoulder */}
+            <div className="absolute bottom-6 right-8 w-3 h-3 bg-green-500 border-2 border-white rounded-full animate-pulse shadow-md"></div>
           </div>
         )}
       </button>

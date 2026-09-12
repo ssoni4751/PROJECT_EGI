@@ -204,12 +204,13 @@ export default function ChatWidget() {
             />
             
             {/* Floating Greeting Bubble next to avatar */}
-            <div className="absolute top-12 -left-4 bg-white px-3 py-2 rounded-2xl rounded-br-none shadow-lg border border-emerald-100 opacity-90 group-hover:opacity-100 transition-opacity">
+            <div className="absolute bottom-20 sm:bottom-24 -left-12 sm:-left-16 bg-white px-4 py-2.5 rounded-2xl rounded-br-none shadow-xl border border-emerald-100 opacity-95 group-hover:opacity-100 transition-opacity flex flex-col items-end">
                <span className="text-emerald-700 text-xs sm:text-sm font-bold whitespace-nowrap">Hi, I'm Pragya! 👋</span>
+               <span className="text-slate-500 text-[10px] sm:text-xs font-medium whitespace-nowrap">AI Digital Assistant</span>
             </div>
 
             {/* Online Indicator near the shoulder */}
-            <div className="absolute bottom-6 right-8 w-3 h-3 bg-green-500 border-2 border-white rounded-full animate-pulse shadow-md"></div>
+            <div className="absolute bottom-8 right-8 w-3 h-3 bg-green-500 border-2 border-white rounded-full animate-pulse shadow-md"></div>
           </div>
         )}
       </button>

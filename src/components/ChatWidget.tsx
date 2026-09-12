@@ -187,7 +187,7 @@ export default function ChatWidget() {
         className={`group flex items-center justify-center hover:scale-105 transition-all duration-300 focus:outline-none z-50 ${
           isOpen 
             ? 'w-14 h-14 rounded-full bg-emerald-600 shadow-xl' 
-            : 'w-40 h-52 sm:w-48 sm:h-60'
+            : 'w-48 h-64 sm:w-56 sm:h-72'
         }`}
       >
         {isOpen ? (
@@ -204,13 +204,13 @@ export default function ChatWidget() {
             />
             
             {/* Floating Greeting Bubble next to avatar */}
-            <div className="absolute bottom-20 sm:bottom-24 -left-12 sm:-left-16 bg-white px-4 py-2.5 rounded-2xl rounded-br-none shadow-xl border border-emerald-100 opacity-95 group-hover:opacity-100 transition-opacity flex flex-col items-end">
+            <div className="absolute bottom-12 sm:bottom-14 -left-8 sm:-left-12 bg-white px-4 py-2.5 rounded-2xl rounded-br-none shadow-xl border border-emerald-100 opacity-95 group-hover:opacity-100 transition-opacity flex flex-col items-end">
                <span className="text-emerald-700 text-xs sm:text-sm font-bold whitespace-nowrap">Hi, I'm Pragya! 👋</span>
                <span className="text-slate-500 text-[10px] sm:text-xs font-medium whitespace-nowrap">AI Digital Assistant</span>
             </div>
 
             {/* Online Indicator near the shoulder */}
-            <div className="absolute bottom-8 right-8 w-3 h-3 bg-green-500 border-2 border-white rounded-full animate-pulse shadow-md"></div>
+            <div className="absolute bottom-8 right-10 sm:right-12 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full animate-pulse shadow-md"></div>
           </div>
         )}
       </button>

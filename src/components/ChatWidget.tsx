@@ -49,7 +49,7 @@ export default function ChatWidget() {
       // For now, we use the local URL if running locally, or the production URL
       const API_URL = process.env.NEXT_PUBLIC_BABU_API_URL || "https://babu-bot.onrender.com"; 
       
-      const response = await fetch(`${API_URL}/api/chat`, {
+      const response = await fetch(`${API_URL}/api/public_chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
